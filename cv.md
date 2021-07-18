@@ -12,7 +12,7 @@
 * https://github.com/AlexeyBachilo
 
 ###Info: 
-My aim is to improve my knowledge and skills, achieve different heights in several branches. I'm punctual, easy-going and hard-working, have good English skills and always down to help, if needed. I don't have any working experience yet, but I have a desire to learn new things and I'm determined to develop myself in terms of job, personality and art.
+I want to become a Junior Developer on Javascript. My aim is to improve my knowledge and skills, achieve different heights in several branches. I'm punctual, easy-going and hard-working and always down to help, if needed. I don't have any working experience yet, but I have a desire to learn new things and I'm determined to develop myself in terms of job, personality and art.
 
 ###Skills: 
 * ######HTML/CSS
@@ -174,4 +174,10 @@ int main() {
 ```
 
 ###Experience:
-Sadly, I don't have any working experience yet. But I'm looking forward to gaining it as soon as possible.
+I don't have any working experience yet.
+
+###Education:
+Belarusian State University, Faculty of Radiophysics and Computer Technologies; Comp-As cources (HTML\CSS, C, C#); BelGameDev meet-ups (game-development, advertisement, etc.)
+
+###English:
+I suppose that my English level is around C1. (I've been learning and practicing it for 13 years).
