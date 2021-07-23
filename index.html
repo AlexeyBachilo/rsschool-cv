@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color: yellow">
+<html lang="en" style="background-color: #C2E2C3">
 	<head>
 		<meta charset="utf-8">
 		<title> CV by Alexey Bachilo </title>
 		<meta name="Description" content="CV by Alexey Bachilo">
 		<meta property="og:title" content="CV">
-		<p class="head"> CV </p>
+		<p class="head"> Curriculum vitae </p>
 	
 		<style>
 			.head{
@@ -25,16 +25,18 @@
 			}
 			.info{
 				padding-left: 5px;
+				margin-bottom: 10px;
 			}
 			aside{
 				float:left;
 				margin: 1px;
-				width: 25%;
+				width: 20%;
+				height: 100%;
 				background-color: white;
 			}
 			main{
 				text-align: left;
-				width: 74%;
+				width: 79%;
 				float: right;
 				margin: 1px;
 				border: 3px solid black;
@@ -78,20 +80,20 @@
 			<ul>
 				<li><a href="#NameandInfo">Name and Info</a></li>
 				<li><a href="#contacts">Contacts</a></li>
-				<li><a href="/code">C++ Code Example</a></li>
-				<li><a href="/expanded">Experience and Education</a></li>
-				<li><a href="/eng">English knowledge</a></li>
+				<li><a href="#code">C++ Code Example</a></li>
+				<li><a href="#expanded">Experience and Education</a></li>
+				<li><a href="#eng">English knowledge</a></li>
 			</ul>
 		</nav>
 	</aside>
 	<main>
 		<img class="face" src="../../BroCrash/face/9uZUWNcUkdY.jpg" alt="My photo">
-		<div class="info" name="NameandInfo">
+		<div class="info" id="NameandInfo">
 			<p><b>Name:</b> Alexey </p>
 			<p><b>Surname:</b>  Bachilo </p>
 			<p><b>Info: </b> I want to become a Junior Developer on Javascript. My aim is to improve my knowledge and skills, achieve different heights in several branches. I'm punctual, easy-going and hard-working and always down to help, if needed. I don't have any working experience yet, but I have a desire to learn new things and I'm determined to develop myself in terms of job, personality and art.</p>
 		</div>
-		<div class="info" name="contacts">
+		<div class="info" id="contacts">
 			<p><b>Contacts:</b></p>
 			<ul>
 				<li>+375447918354 (A1)</li>
@@ -101,9 +103,19 @@
 				<li><a href="https://github.com/AlexeyBachilo">Github</a></li>
 			</ul>
 		</div>
-		<div class="info" name="code">
+		<div class="info" id="skill">
+			<p><b>Skills:</b></p>
+			<ul>
+				<li>HTML/CSS</li>
+				<li>Git</li>
+				<li>C</li>
+				<li>C++</li>
+				<li>C#</li>
+			</ul>
+		</div>
+		<div class="info" id="code">
 			 <input type="checkbox" id="hidecode" class="hide"/>
-    			<label for="hidecode">Click HERE to see the C++ Code Example</label>
+    			<label for="hidecode" style="text-decoration: underline">Click HERE to see the C++ Code Example</label>
    					 <div class="code">
        					 <pre>
 							<code>
@@ -259,6 +271,13 @@ int main() {
 						 	</code>
 						 </pre>
     				</div>
+		</div>
+		<div class="info" id="expanded">
+			<p><b>Experience: </b>I don't have any working experience yet. </p>
+			<p><b>Education: </b>Belarusian State University, Faculty of Radiophysics and Computer Technologies; Comp-As cources (HTML\CSS, C, C#); BelGameDev meet-ups (game-development, advertisement, etc.) </p>
+		</div>
+		<div class="info" id="eng">
+			<p><b>English: </b>I suppose that my English level is around C1. (I've been learning and practicing it for 13 years).</p>
 		</div>
 	</main>
 </html>
