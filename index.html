@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #C2E2C3">
+	<head>
+		<meta charset="utf-8">
+		<title> CV by Alexey Bachilo </title>
+		<meta name="Description" content="CV by Alexey Bachilo">
+		<meta property="og:title" content="CV">
+		<p class="head"> Curriculum vitae </p>
+	
+		<style>
+			.head{
+				text-align: center;
+				font-size: 70px;
+				border: 3px solid black;
+				padding:10px;
+				margin-bottom: 1px;
+				margin-top: 0px;
+				background-color: white;
+				font-family: Times New Roman, sans-serif;
+			}
+			.menu{
+				font-size: 20px;
+				border: 3px solid black;
+				font-family: Times New Roman, sans-serif;
+			}
+			.info{
+				padding-left: 5px;
+				margin-bottom: 10px;
+			}
+			aside{
+				margin: 1px;
+				text-align: center;
+				background-color: white;
+			}
+			main{
+				text-align: left;
+				margin: 1px;
+				border: 3px solid black;
+				background-color: white;
+				font-size: 18px;
+			}
+			footer{
+				text-align: center;
+				margin: 1px;
+				border: 3px solid black;
+				background-color: white;s
+			}
+			.face{
+				float: right;
+				margin: 1px;
+				width: 20%;
+				height: 20%;
+			}
+			.hide {
+ 			   display: none; 
+			}
+			.hide + label ~ div{
+   				display: none;
+			}
+			.hide:checked + label + div {
+   				display: block; 
+			}
+			.hide + label,
+			.hide:checked + label {
+   				padding: 0;
+   				cursor: pointer;
+			}
+			.hide:checked + label {
+   				color: red;
+    			border-bottom: 0;
+			}
+			.code{
+				border: 1.5px solid grey;
+				background-color: #DDDDDD
+			}
+		</style>
+	</head>
+	
+	<aside>
+		<nav class="menu">
+			<p style="text-align: center; font-weight:bold"> Menu: </p>
+			<ul class="menuinline">
+				<li style="display: inline; margin: 5px;"><a href="#NameandInfo">Name and Info</a></li>
+				<li style="display: inline; margin: 5px;"><a href="#contacts">Contacts</a></li>
+				<li style="display: inline; margin: 5px;"><a href="#code">C++ Code Example</a></li>
+				<li style="display: inline; margin: 5px;"><a href="#expanded">Experience and Education</a></li>
+				<li style="display: inline; margin: 5px;"><a href="#eng">English knowledge</a></li>
+			</ul>
+		</nav>
+	</aside>
+	<main>
+		<img class="face" src="../../BroCrash/face/9uZUWNcUkdY.jpg" alt="My photo">
+		<div class="info" id="NameandInfo">
+			<p><b>Name:</b> Alexey </p>
+			<p><b>Surname:</b>  Bachilo </p>
+			<p><b>Info: </b> I want to become a Junior Developer on Javascript. My aim is to improve my knowledge and skills, achieve different heights in several branches. I'm punctual, easy-going and hard-working and always down to help, if needed. I don't have any working experience yet, but I have a desire to learn new things and I'm determined to develop myself in terms of job, personality and art.</p>
+		</div>
+		<div class="info" id="contacts">
+			<p><b>Contacts:</b></p>
+			<ul>
+				<li>+375447918354 (A1)</li>
+				<li><a href="https://vk.com/brocrash">VK</a></li>
+				<li><a href="https://t.me/brocrash">Telegram</a></li>
+				<li><a href="https://www.instagram.com/brocrash/">Instagram</a></li>
+				<li><a href="https://github.com/AlexeyBachilo">Github</a></li>
+			</ul>
+		</div>
+		<div class="info" id="skill">
+			<p><b>Skills:</b></p>
+			<ul>
+				<li>HTML/CSS</li>
+				<li>Git</li>
+				<li>C</li>
+				<li>C++</li>
+				<li>C#</li>
+			</ul>
+		</div>
+		<div class="info" id="code">
+			 <input type="checkbox" id="hidecode" class="hide"/>
+    			<label for="hidecode" style="text-decoration: underline">Click HERE to see the C++ Code Example</label>
+   					 <div class="code">
+       					 <pre>
+							<code>
+#include <iostream>
+#include <fstream>
+#include <cassert>
+using std::endl;
+using std::cout;
+using std::cin;
+using std::ifstream;
+using std::ofstream;
+
+struct pixel{
+	unsigned char red;
+	unsigned char green;
+	unsigned char blue;
+};//A
+
+void shift(pixel& a) {
+	unsigned char save = a.red;
+	a.red = a.green;
+	a.green = a.blue;
+	a.blue = save;
+}//A
+
+void inversion(pixel& a) {
+	a.blue = 255 - a.blue;
+	a.green = 255 - a.green;
+	a.red = 255 - a.red;
+}//A
+
+void blue_color_channel(pixel& a) {
+	a.red = 0;
+	a.green = 0;
+}//A
+
+void green_color_channel(pixel& a) {
+	a.red = 0;
+	a.blue = 0;
+}//A
+
+void red_color_channel(pixel& a) {
+	a.blue = 0;
+	a.green = 0;
+}//A
+
+void monochrome(pixel& a) {
+	unsigned char common = (a.blue + a.green + a.red) / 3;
+	a.blue = common;
+	a.green = common;
+	a.red = common;
+}//A
+
+void pop_art(pixel& a) {
+	unsigned char common = (a.blue + a.green + a.red) / 3;
+	if (common < 100) {
+		a.red = 178;
+		a.green = 58;
+		a.blue = 204;
+	}
+	else {
+		a.red = 255;
+		a.green = 207;
+		a.blue = 72;
+	}
+}//A
+
+void picture(const char* name1, const char* name2, void (*change)(pixel&)) {
+	ifstream in(name1, std::ios::binary);
+	ofstream out(name2, std::ios::binary);
+	assert(in.is_open());
+	int w, h;
+	in.read((char*)&w, 4);
+	in.read((char*)&h, 4);
+	out.write((char*)&w, 4);
+	out.write((char*)&h, 4);
+	for (int i = 0; i < h; i++) {
+		for (int j = 0; j < w; j++) {
+			pixel a;
+			in.read((char*)&a.blue, 1);
+			in.read((char*)&a.green, 1);
+			in.read((char*)&a.red, 1);
+			change(a);
+			out.write((char*)&a.blue, 1);
+			out.write((char*)&a.green, 1);
+			out.write((char*)&a.red, 1);
+		}
+	}
+}//B
+
+void gradient(pixel& a, double grad) {
+	a.red = 255 - (255 - a.red) * (1 - grad);
+	a.green = 255 - (255 - a.green) * (1 - grad);
+	a.blue = 255 - (255 - a.blue) * (1 - grad);
+}//C
+
+void picture_gradient(const char* name1, const char* name2, bool direction) {
+	ifstream in(name1, std::ios::binary);
+	ofstream out(name2, std::ios::binary);
+	assert(in.is_open());
+	int w, h;
+	in.read((char*)&w, 4);
+	in.read((char*)&h, 4);
+	out.write((char*)&w, 4);
+	out.write((char*)&h, 4);
+	if (direction == 1) {
+		for (int i = 0; i < h; i++) {
+			for (int j = 0; j < w; j++) {
+				pixel a;
+				double grad = (double)i / h;
+				in.read((char*)&a.blue, 1);
+				in.read((char*)&a.green, 1);
+				in.read((char*)&a.red, 1);
+				gradient(a, grad);
+				out.write((char*)&a.blue, 1);
+				out.write((char*)&a.green, 1);
+				out.write((char*)&a.red, 1);
+			}
+		}
+	}
+	else {
+		for (int i = 0; i < h; i++) {
+			for (int j = 0; j < w; j++) {
+				pixel a;
+				double grad = 1 - (double)i / h;
+				in.read((char*)&a.blue, 1);
+				in.read((char*)&a.green, 1);
+				in.read((char*)&a.red, 1);
+				gradient(a, grad);
+				out.write((char*)&a.blue, 1);
+				out.write((char*)&a.green, 1);
+				out.write((char*)&a.red, 1);
+			}
+		}
+	}
+	
+}//C
+
+
+
+int main() {
+	picture("butterfly.img", "butterfly1.img", shift);
+	picture("butterfly.img", "butterfly2.img", inversion);
+	picture("butterfly.img", "butterfly3.img", blue_color_channel);
+	picture("butterfly.img", "butterfly4.img", green_color_channel);
+	picture("butterfly.img", "butterfly5.img", red_color_channel);
+	picture("butterfly.img", "butterfly6.img", monochrome);
+	picture("butterfly.img", "butterfly7.img", pop_art);
+	picture_gradient("butterfly.img", "butterfly8.img",1);
+}
+
+					
+						 	</code>
+						 </pre>
+    				</div>
+		</div>
+		<div class="info" id="expanded">
+			<p><b>Experience: </b>I don't have any working experience yet. </p>
+			<p><b>Education: </b>Belarusian State University, Faculty of Radiophysics and Computer Technologies; Comp-As cources (HTML\CSS, C, C#); BelGameDev meet-ups (game-development, advertisement, etc.) </p>
+		</div>
+		<div class="info" id="eng">
+			<p><b>English: </b>I suppose that my English level is around C1. (I've been learning and practicing it for 13 years).</p>
+		</div>
+	</main>
+	<footer>
+		<div class="info">
+			<img src="rs_school_js.svg" alt="RSSchool Logo" style="float: left; width: 10%;">
+	 		<p> Made by <a href="https://github.com/AlexeyBachilo"> Alexey Bachilo </a> in 2021 </p>
+	 		<p><a href="https://rs.school/js/"> RSSchool-JS </a></p>
+	  	</div>
+	</footer>
+</html>
