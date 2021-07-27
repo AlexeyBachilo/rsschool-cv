@@ -1,55 +1,64 @@
 <!DOCTYPE html>
 <html lang="en" style="background-color: #C2E2C3">
-	<header>
+	<head>
 		<meta charset="utf-8">
 		<title> CV by Alexey Bachilo </title>
 		<meta name="Description" content="CV by Alexey Bachilo">
 		<meta property="og:title" content="CV">
-		<p class="head"> Curriculum vitae </p>
 	
 		<style>
 			.head{
 				text-align: center;
 				font-size: 70px;
 				border: 3px solid black;
-				padding:10px;
 				margin-bottom: 1px;
 				margin-top: 0px;
+				margin-left: auto;
+				margin-right: auto;
+				width: 1000px;
 				background-color: white;
 				font-family: Times New Roman, sans-serif;
 			}
 			.menu{
 				font-size: 20px;
 				border: 3px solid black;
+				text-align: center;
 				font-family: Times New Roman, sans-serif;
+				margin-bottom: 1px;
+				margin-left: auto;
+				margin-right: auto;
+				width: 1000px;
+				background-color: white;
 			}
 			.info{
 				padding-left: 5px;
 				margin-bottom: 10px;
 			}
-			aside{
-				margin: 1px;
-				text-align: center;
-				background-color: white;
-			}
-			main{
+			.body{
 				text-align: left;
-				margin: 1px;
 				border: 3px solid black;
 				background-color: white;
 				font-size: 18px;
+				width: 1000px;
+				margin-bottom: 1px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 2px;
 			}
 			footer{
 				text-align: center;
-				margin: 1px;
+				width: 1000px;
+				margin-left: auto;
+				margin-right: auto;
 				border: 3px solid black;
 				background-color: white;
 			}
 			.face{
-				float: right;
-				margin: 1px;
 				width: 20%;
+				border: 3px solid black;
 				height: 20%;
+				margin: 1px;
+				float: right;
 			}
 			.hide {
  			   display: none; 
@@ -74,50 +83,57 @@
 				background-color: #DDDDDD
 			}
 		</style>
-	</header>
+	</head>
 	
-	<aside>
-		<nav class="menu">
-			<p style="text-align: center; font-weight:bold"> Menu: </p>
-			<ul class="menuinline">
-				<li style="display: inline; margin: 5px;"><a href="#NameandInfo">Name and Info</a></li>
-				<li style="display: inline; margin: 5px;"><a href="#contacts">Contacts</a></li>
-				<li style="display: inline; margin: 5px;"><a href="#code">C++ Code Example</a></li>
-				<li style="display: inline; margin: 5px;"><a href="#expanded">Experience and Education</a></li>
-				<li style="display: inline; margin: 5px;"><a href="#eng">English knowledge</a></li>
-			</ul>
-		</nav>
-	</aside>
-	<main>
-		<img class="face" src="../../BroCrash/face/9uZUWNcUkdY.jpg" alt="My photo">
-		<div class="info" id="NameandInfo">
-			<p><b><h3>Name: </h3></b> Alexey </p>
-			<p><b><h3>Surname: </h3></b>  Bachilo </p>
-			<p><b><h3>Info: </h3></b> I want to become a Junior Developer on Javascript. My aim is to improve my knowledge and skills, achieve different heights in several branches. I'm punctual, easy-going and hard-working and always down to help, if needed. I don't have any working experience yet, but I have a desire to learn new things and I'm determined to develop myself in terms of job, personality and art.</p>
-		</div>
-		<div class="info" id="contacts">
-			<p><b><h3>Contacts: </h3></b></p>
-			<ul>
-				<li>+375447918354 (A1)</li>
-				<li><a href="https://vk.com/brocrash">VK</a></li>
-				<li><a href="https://t.me/brocrash">Telegram</a></li>
-				<li><a href="https://www.instagram.com/brocrash/">Instagram</a></li>
-				<li><a href="https://github.com/AlexeyBachilo">Github</a></li>
-			</ul>
-		</div>
-		<div class="info" id="skill">
-			<p><b><h3>Skills: </h3></b></p>
-			<ul>
-				<li>HTML/CSS</li>
-				<li>Git</li>
-				<li>C</li>
-				<li>C++</li>
-				<li>C#</li>
-			</ul>
-		</div>
-		<div class="info" id="code">
-			 <input type="checkbox" id="hidecode" class="hide"/>
-    			<label for="hidecode" style="text-decoration: underline">Click HERE to see the C++ Code Example</label>
+	<body>
+		<header>
+			<h1 class="head"> Curriculum vitae </h1>
+		</header>
+		<aside>
+			<nav class="menu">
+				<ul class="menuinline">
+					<li style="display: inline; margin: 5px;"><a href="#NameandInfo">Name and Info</a></li>
+					<li style="display: inline; margin: 5px;"><a href="#contacts">Contacts</a></li>
+					<li style="display: inline; margin: 5px;"><a href="#code">C++ Code Example</a></li>
+					<li style="display: inline; margin: 5px;"><a href="#expanded">Experience and Education</a></li>
+					<li style="display: inline; margin: 5px;"><a href="#eng">English knowledge</a></li>
+				</ul>
+			</nav>
+		</aside>	
+		<main>
+			<div class="body">
+				<img class="face" src="9uZUWNcUkdY.jpg" alt="My photo">
+				<article class="info" id="NameandInfo">
+					<h3>Name: </h3>
+					<p>Alexey </p> 
+					<h3>Surname: </h3>  
+					<p>Bachilo </p>
+					<h3>Info: </h3> 
+					<p>I want to become a Junior Developer on Javascript. My aim is to improve my knowledge and skills, achieve different heights in several branches. I'm punctual, easy-going and hard-working and always down to help, if needed. I don't have any working experience yet, but I have a desire to learn new things and I'm determined to develop myself in terms of job, personality and art.</p>
+			</article>
+				<article class="info" id="contacts">
+					<h3>Contacts: </h3>
+					<ul>
+						<li>+375447918354 (A1)</li>
+						<li><a href="https://vk.com/brocrash">VK</a></li>
+						<li><a href="https://t.me/brocrash">Telegram</a></li>
+						<li><a href="https://www.instagram.com/brocrash/">Instagram</a></li>
+						<li><a href="https://github.com/AlexeyBachilo">Github</a></li>
+					</ul>
+				</article>
+				<article class="info" id="skill">
+					<h3>Skills: </h3>
+					<ul>
+						<li>HTML/CSS</li>
+						<li>Git</li>
+						<li>C</li>
+						<li>C++</li>
+						<li>C#</li>
+					</ul>
+				</article>
+				<article class="info" id="code">
+			 		<input type="checkbox" id="hidecode" class="hide"/>
+    				<label for="hidecode" style="text-decoration: underline">Click HERE to see the C++ Code Example</label>
    					 <div class="code">
        					 <pre>
 							<code>
@@ -273,20 +289,25 @@ int main() {
 						 	</code>
 						 </pre>
     				</div>
-		</div>
-		<div class="info" id="expanded">
-			<p><b><h3>Experience: </h3></b>I don't have any working experience yet. </p>
-			<p><b><h3>Education: </h3></b>Belarusian State University, Faculty of Radiophysics and Computer Technologies; Comp-As cources (HTML\CSS, C, C#); BelGameDev meet-ups (game-development, advertisement, etc.) </p>
-		</div>
-		<div class="info" id="eng">
-			<p><b><h3>English: </h3></b>I suppose that my English level is around C1. (I've been learning and practicing it for 13 years).</p>
-		</div>
-	</main>
-	<footer>
-		<div class="info">
-			<img src="rs_school_js.svg" alt="RSSchool Logo" style="float: left; width: 10%;">
-	 		<p> Made by <a href="https://github.com/AlexeyBachilo"> Alexey Bachilo </a> in 2021 </p>
-	 		<p><a href="https://rs.school/js/"> RSSchool-JS </a></p>
-	  	</div>
-	</footer>
+				</article>
+				<article class="info" id="expanded">
+					<h3>Experience: </h3>
+					<p>I don't have any working experience yet.</p>
+					<h3>Education: </h3>
+					<p>Belarusian State University, Faculty of Radiophysics and Computer Technologies; Comp-As cources (HTML\CSS, C, C#); BelGameDev meet-ups (game-development, advertisement, etc.) </p>
+				</article>
+				<article class="info" id="eng">
+					<h3>English: </h3>
+					<p>I suppose that my English level is around C1. (I've been learning and practicing it for 13 years).</p>
+				</article>	
+			</div>
+		</main>
+		<footer>
+			<div class="info">
+				<img src="rs_school_js.svg" alt="RSSchool Logo" style="float: left; width: 15%;">
+	 			<p> Made by <a href="https://github.com/AlexeyBachilo"> Alexey Bachilo </a> in 2021 </p>
+	 			<p><a href="https://rs.school/js/"> RSSchool-JS </a></p>
+	  		</div>
+		</footer>
+	</body>	
 </html>
